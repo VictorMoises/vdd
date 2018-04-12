@@ -3,7 +3,9 @@ const Discord = require('discord.js');
 const client = new Discord.Client({
     autoReconnect: true,
     max_message_cache: 0
+    
 });
+
 const moment = require('moment');
 moment.locale('pt-BR');
 
@@ -18,7 +20,6 @@ client.on('guildMemberAdd', member => {
 
 client.login(token)
 
-});
 
 client.on("message", (message) => {
 
