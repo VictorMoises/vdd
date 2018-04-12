@@ -28,7 +28,7 @@ client.on("message", (message) => {
         if (message.author.bot) return message.reply("**Bots não podem usar esse comando!**")
         if (message.mentions.users.size < 1) return message.channel.sendMessage({
         "embed": {
-          "description": "Aqui está seu Avatar" + message.author.username + "**",
+          "description": "Aqui está seu Avatar" \n + message.author.username + "**",
           "color": 16711680,
           "image": {
             "url": message.author.displayAvatarURL
