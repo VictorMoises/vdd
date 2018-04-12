@@ -23,8 +23,6 @@ client.login(token)
 
 client.on("message", (message) => {
     
-    if (!message.content.startsWith("-mute")) return;
-    
     let user = message.mentions.users.first(); 
     let reason = args.slice(1).join(' ');
     if (!message.member.hasPermission(["MANAGE_MESSAGES"])) return message.reply("**VocÃª nÃ£o tem permissÃ£o para mutar alguem!**");
@@ -47,16 +45,14 @@ client.on("message", (message) => {
                 message.reply("**UsuÃ¡rio mutado por " + args[1] + "minutos**");
                message.mentions.users.first().send("**VocÃª foi mutado(a) no servidor " + message.guild.name + " por " + args[1] + "m !**");
                message.mentions.users.first().send("**VocÃª foi desmutado(a) no servidor " + message.guild.name + "!**");
-        }   if(!mute){
+            if(!mute){
             message.reply("**Use o comando novamente, pois o cargo " + cargoNOME + " nÃ£o existia aqui!**");
             message.guild.createRole({
                 name: cargoNOME
             })
         }
     }
-
-}
-
+        
     if(message.content.startsWith(prefix + "avatar")){
         let user = message.mentions.users.first(); 
         if (message.author.bot) return message.reply("**Bots não podem usar esse comando!**")
