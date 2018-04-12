@@ -41,5 +41,9 @@ client.on("message", (message) => {
           "image": {
             "url": message.mentions.users.first().displayAvatarURL
           }
-        }
-      });
+              ]
+            }
+          });
+    }
+
+})
