@@ -42,6 +42,4 @@ client.on("message", (message) => {
             "url": message.mentions.users.first().displayAvatarURL
           }
         }
-      })
-    }
-});
+      });
