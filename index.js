@@ -12,7 +12,19 @@ moment.locale('pt-BR');
 const prefix = "-"
 const token = process.env.token;
 
+let guilds = {};
+
+client.on('ready', function () {
+  console.log(`Conectado com Sucesso a ${client.user.username}#${client.user.discriminator}`);
+  clientUser = client.user;
+  clientUser.setActivity('Pablo Vittar do Prédio. ', { type: 'PLAYING' });
+
 client.on('guildMemberAdd', member => {
+    "embed": {
+    "description": "**Bem - Vindo ao Nosso Servidor, espero que curta bastante.**"
+    "color": 16711680,
+    "image": {
+    "url":
     client.guilds.get(member.guild.id).channels.get("418834373610307586").send(`Olá ${member}, Obrigado por entrar no **Player South - Brasil** Leia as regras e tenha uma boa estadia. `);
    })
 
