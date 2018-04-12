@@ -28,7 +28,8 @@ client.on("message", (message) => {
         if (message.author.bot) return message.reply("**Bots não podem usar esse comando!**")
         if (message.mentions.users.size < 1) return message.channel.sendMessage({
         "embed": {
-          "description": \n"Aqui está o Avatar de" + message.author.username + "**",
+          "description": "Aqui está o seu Avatar" 
+           + message.author.username + "**",
           "color": 16711680,
           "image": {
             "url": message.author.displayAvatarURL
@@ -37,7 +38,8 @@ client.on("message", (message) => {
       });
       message.channel.sendMessage({
         "embed": {
-          "description": "**" + message.mentions.users.first().username + "**",
+          "description": "Aqui está o Avatar de" 
+           + message.mentions.users.first().username + "**",
           "color": 16711680,
           "image": {
             "url": message.mentions.users.first().displayAvatarURL
