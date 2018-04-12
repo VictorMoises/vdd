@@ -37,7 +37,7 @@ client.on("message", (message) => {
       });
       message.channel.sendMessage({
         "embed": {
-          "description": "**" Aqui está o avatar de "**" + "**" + message.mentions.users.first().username + "**",
+          "description": "**" Aqui está o avatar de "**" + message.mentions.users.first().username + "**",
           "color": 16711680,
           "image": {
             "url": message.mentions.users.first().displayAvatarURL
