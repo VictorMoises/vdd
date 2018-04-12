@@ -30,7 +30,7 @@ client.on("message", (message) => {
     if (reason.length < 1) return message.reply('**Diga o tempo em minutos para eu mutar!**');
     if(message.guild.member(message.mentions.users.first()).highestRole.position >= message.member.highestRole.position){
         message.reply("**Este usuÃ¡rio tem um cargo maior que o seu!**");
-    } else {
+      else {
         if (message.guild.roles.find("name", cargoNOME)){
             var mute = message.guild.roles.find("name",cargoNOME)
             for (var i =0;i < mute.members.size;i++){
@@ -49,10 +49,9 @@ client.on("message", (message) => {
             message.reply("**Use o comando novamente, pois o cargo " + cargoNOME + " nÃ£o existia aqui!**");
             message.guild.createRole({
                 name: cargoNOME
-            })
-        }
-    }
-        
+             }
+           }
+       });           
     if(message.content.startsWith(prefix + "avatar")){
         let user = message.mentions.users.first(); 
         if (message.author.bot) return message.reply("**Bots não podem usar esse comando!**")
