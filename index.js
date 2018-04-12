@@ -15,16 +15,16 @@ const token = process.env.token;
 let guilds = {};
 
 client.on('ready', function () {
-  console.log(`Conectado com Sucesso a ${client.user.username}#${client.user.discriminator}`);
+  console.log(`Conectado com Sucesso. as ${client.user.username}#${client.user.discriminator}`);
   clientUser = client.user;
-  clientUser.setActivity('Pablo Vittar do Prédio. ', { type: 'PLAYING' });
+  clientUser.setActivity('Pablo Vittar do Prédio!', { type: 'PLAYING' });
+    
+});   
     
 
 client.login(token)
     
-client.on('guildMemberAdd', member => {
-    client.guilds.get(member.guild.id).channels.get("418834373610307586").send(`Olá ${member}, Obrigado por entrar no **Player South - Brasil** Leia as regras e tenha uma boa estadia. `);
-   })
+
 
 
 client.on("message", (message) => {
