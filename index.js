@@ -28,7 +28,6 @@ client.on("message", (message) => {
         if (message.author.bot) return message.reply("**Bots não podem usar esse comando!**")
         if (message.mentions.users.size < 1) return message.channel.sendMessage({
         "embed": {
-          "description": "Aqui está o seu avatar"
           "description": "+ message.author.username + "**",
           "color": 16711680,
           "image": {
@@ -38,7 +37,6 @@ client.on("message", (message) => {
       });
       message.channel.sendMessage({
         "embed": {
-          "description: "Aqui está o avatar de"
           "description": + message.mentions.users.first().username + "**",
           "color": 16711680,
           "image": {
