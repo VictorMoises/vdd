@@ -12,8 +12,7 @@ moment.locale('pt-BR');
 const prefix = "-"
 const token = process.env.token;
 
-client.on('guildMemberAdd', member => {
-    client.guilds.get(member.guild.id).channels.get("418834373610307586").send 
+client.on('guildMemberAdd', member => {client.guilds.get(member.guild.id).channels.get("418834373610307586").send (`sla. `);
      embed: {
     thumbnail: {
          url: 'attachment://file.jpg'
