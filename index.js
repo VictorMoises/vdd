@@ -40,10 +40,9 @@ client.on("message", (message) => {
           "color": 16711680,
           "image": {
             "url": message.mentions.users.first().displayAvatarURL
-                }
-              ]
+              }
             }
-          });
+         });
     }
 
 })
