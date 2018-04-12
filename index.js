@@ -44,4 +44,4 @@ client.on("message", (message) => {
         }
       })
     }
-})
+});
