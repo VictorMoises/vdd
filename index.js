@@ -19,7 +19,7 @@ client.on('ready', function () {
   clientUser = client.user;
   clientUser.setActivity('Pablo Vittar do Prédio. ', { type: 'PLAYING' });
     
-"embed": {
+    
 client.on('guildMemberAdd', member => {
     client.guilds.get(member.guild.id).channels.get("418834373610307586").send(`Olá ${member}, Obrigado por entrar no **Player South - Brasil** Leia as regras e tenha uma boa estadia. `);
    })
